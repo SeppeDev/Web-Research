@@ -28,6 +28,21 @@ New Technology
 
 		https://developer.xamarin.com/guides/android/getting_started/hello,android/hello,android_deepdive/
 	}
+
+	03/10/2016
+	{
+		De app verder uitbouwen tot een multiscreen app.
+
+		https://developer.xamarin.com/guides/android/getting_started/hello,android_multiscreen/hello,android_multiscreen_quickstart/
+
+
+		Deep Dive bekijken van de multiscreen app.
+
+		https://developer.xamarin.com/guides/android/getting_started/hello,android_multiscreen/hello,android_multiscreen_deepdive/
+
+
+		
+	}
 }
 
 

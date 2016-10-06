@@ -6,6 +6,7 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:label="PhoneWord" android:icon="@drawable/icon" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <activity android:label="@string/callHistory" android:name="md542b6968b88fa5537659bae8feb8703db.CallHistoryActivity" />
     <activity android:icon="@drawable/icon" android:label="Phone Word" android:name="md542b6968b88fa5537659bae8feb8703db.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
