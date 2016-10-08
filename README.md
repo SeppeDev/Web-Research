@@ -39,9 +39,16 @@ New Technology
 		Deep Dive bekijken van de multiscreen app.
 
 		https://developer.xamarin.com/guides/android/getting_started/hello,android_multiscreen/hello,android_multiscreen_deepdive/
+	}
+
+	08/10/2016
+	{
+		Zelf wat zitten uittesten en uiteindelijk een kleine app gemaakt die je toestaat je Wifi aan en af te zetten. Vrij nutteloos, maar het werkt wel (juiste permissions etc.)
 
 
-		
+		Gezocht naar verschillende tutorials of informatie, maar ofwel zeer basic dingen gevonden, ofwel zeer geavanceerd. Een todo-tutorial is niet te vinden, maar wel een premade example van een todo app, dat Xplatform is. Dit bekijk ik grondig met de uitleg van Xplatform ernaast, om waarschijnlijk daarna zelf een Xplatform todo te maken.
+
+		https://developer.xamarin.com/guides/cross-platform/application_fundamentals/building_cross_platform_applications/
 	}
 }
 
