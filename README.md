@@ -50,6 +50,11 @@ New Technology
 
 		https://developer.xamarin.com/guides/cross-platform/application_fundamentals/building_cross_platform_applications/
 	}
+
+	10/10/2016
+	{
+		Meer Xplatform Todo lezen en snappen.
+	}
 }
 
 
