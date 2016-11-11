@@ -50,6 +50,9 @@ namespace Todo.Droid
             todo.Done = doneRadioButton.Checked;
             TodoManager.SaveTodo(todo);
 
+            titleEditText.Text = "Next...";
+            doneRadioButton.Checked = false;
+
             FillTextView();
         }
 

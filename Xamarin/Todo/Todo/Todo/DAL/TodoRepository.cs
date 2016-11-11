@@ -4,6 +4,7 @@ using System.Text;
 
 using System.IO;
 using Todo.BL;
+using System.Linq;
 
 namespace Todo.DAL
 {
@@ -66,6 +67,7 @@ namespace Todo.DAL
 
         public static IEnumerable<Task> GetTodos()
         {
+            //return (from i in me.db.Table<Task>() select i).ToList();
             return me.db.GetItems();
         }
 

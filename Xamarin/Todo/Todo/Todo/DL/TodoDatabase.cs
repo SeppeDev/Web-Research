@@ -29,15 +29,15 @@ namespace Todo.DL
 
         public int SaveItem( Task item)
         {
-            if (item.ID != 0)
+            /*if (item.ID != 0)
             {
                 Update(item);
                 return item.ID;
             }
             else
-            {
+            {*/
                 return Insert(item);
-            }
+            /*}*/
         }
     }
 }
