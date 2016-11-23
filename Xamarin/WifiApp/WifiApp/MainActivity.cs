@@ -24,11 +24,10 @@ namespace WifiApp
             //My code
             Button enableButton = FindViewById<Button>(Resource.Id.enableButton);
             Button disableButton = FindViewById<Button>(Resource.Id.disableButton);
+            var wifiManager = Application.Context.GetSystemService(Context.WifiService) as WifiManager;
 
             enableButton.Click += (object sender, EventArgs e) =>
             {
-                var wifiManager = Application.Context.GetSystemService(Context.WifiService) as WifiManager;
-
                 if (wifiManager != null)
                 {
                     wifiManager.SetWifiEnabled(true);
@@ -37,8 +36,6 @@ namespace WifiApp
 
             disableButton.Click += (object sender, EventArgs e) =>
             {
-                var wifiManager = Application.Context.GetSystemService(Context.WifiService) as WifiManager;
-
                 if (wifiManager != null)
                 {
                     wifiManager.SetWifiEnabled(false);
