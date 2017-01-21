@@ -147,4 +147,28 @@ Proof Of Concept
 		Ideeën:
 			App in Xamarin -> heuuuuuh, ni zo simpel, dus scratch this.
 	}
+
+	30/11/2016
+	{
+		Xamarin app die via QR code android settings kan aanpassen.
+			- QR code die toegang geeft tot wifi netwerk
+
+		Daarna eventueel
+			- cross platform
+			- QR code die naar spotofylijst linkt
+	}
+
+	17/12/2016
+	{
+		Wat zoeken over QR-codes en hoe die te lezen vallen met Xamarin. Een makkelijke plugin gevonden die dit voor me kan doen.
+
+		Gezocht met het toevoegen van een nieuw netwerk in de settings. Wat liggen prutsen, maar uiteindelijk lukt dit ook. Vrij gelijkaardig met hoe ik in de eerste periode mijn Wifi app gemaakt had.
+
+		Probleem ontdekt, waarbij het netwerk niet altijd toegevoegd wordt. Wat tests doen om te zien hoe dit komt.
+	}
+
+	18/12/2016
+	{
+		Probleem waarschijnlijk gevonden. De wifi van het apparaat moet eerst opstaan voordat er een netwerk aan toe kan worden gevoegd. Volgorde verandert in code, zodat eerst de wifi aangezet wordt, en vervolgens pas een netwerk toegevoegd wordt, en dat lijkt te werken.
+	}
 }
