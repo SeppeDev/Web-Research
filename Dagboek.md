@@ -171,4 +171,14 @@ Proof Of Concept
 	{
 		Probleem waarschijnlijk gevonden. De wifi van het apparaat moet eerst opstaan voordat er een netwerk aan toe kan worden gevoegd. Volgorde verandert in code, zodat eerst de wifi aangezet wordt, en vervolgens pas een netwerk toegevoegd wordt, en dat lijkt te werken.
 	}
+
+	21/01/2017
+	{
+		Zoeken naar hoe ik QR-codes kan genereren zelf. Niet zoveel over te vinden als over het lezen. Enkele opties gevonden en voorbeelden, maar tot nu toe werkt er nog geen enkele.
+	}
+
+	22/01/2017
+	{
+		Een van de voorbeelden aan de praat gekregen. Nu is het plan te proberen de code af te printen (opslaan als PDF/doorsturen naar een netwerk printer/...)
+	}
 }

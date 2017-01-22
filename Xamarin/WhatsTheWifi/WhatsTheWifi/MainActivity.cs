@@ -26,6 +26,11 @@ namespace WhatsTheWifi
             // and attach an event to it
             Button button = FindViewById<Button>(Resource.Id.MyButton);
 
+            Button createButton = FindViewById<Button>(Resource.Id.Create);
+            string name = FindViewById<EditText>(Resource.Id.Name).Text;
+            string password = FindViewById<EditText>(Resource.Id.Password).Text;
+            ImageView qrView = FindViewById<ImageView>(Resource.Id.QrView);
+
 
             MobileBarcodeScanner.Initialize(Application);
 
@@ -47,6 +52,14 @@ namespace WhatsTheWifi
 
                     AddWifiNetwork(SSID, Password);
                 }
+            };
+
+
+
+            //Show
+            createButton.Click += (sender, e) =>
+            {
+                CreateQRCode(qrView, name, password);
             };
         }
 
@@ -77,6 +90,24 @@ namespace WhatsTheWifi
             string[] answers = concatenated.Split(delimiterChars);
 
             return answers;
+        }
+
+
+
+        private void CreateQRCode(ImageView qrView, string name, string password)
+        {
+            var barcodeWriter = new ZXing.Mobile.BarcodeWriter
+            {
+                Format = ZXing.BarcodeFormat.QR_CODE,
+                Options = new ZXing.Common.EncodingOptions
+                {
+                    Width = 600,
+                    Height = 600
+                }
+            };
+            var barcode = barcodeWriter.Write( name + "/" + password );
+
+            qrView.SetImageBitmap(barcode);
         }
     }
 }
