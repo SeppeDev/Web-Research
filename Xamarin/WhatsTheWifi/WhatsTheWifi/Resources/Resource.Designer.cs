@@ -63,6 +63,9 @@ namespace WhatsTheWifi
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f050005
+			public const int Background = 2131034117;
+			
 			// aapt resource value: 0x7f050003
 			public const int Create = 2131034115;
 			
@@ -78,8 +81,8 @@ namespace WhatsTheWifi
 			// aapt resource value: 0x7f050004
 			public const int QrView = 2131034116;
 			
-			// aapt resource value: 0x7f050005
-			public const int contentFrame = 2131034117;
+			// aapt resource value: 0x7f050006
+			public const int contentFrame = 2131034118;
 			
 			static Id()
 			{

@@ -180,5 +180,21 @@ Proof Of Concept
 	22/01/2017
 	{
 		Een van de voorbeelden aan de praat gekregen. Nu is het plan te proberen de code af te printen (opslaan als PDF/doorsturen naar een netwerk printer/...)
+
+		Ik kan alleen een WebView printen, geen imageview. Zien of ik de QRCode ook in een webview kan steken.
+
+		ImageView in WebView steken is niet gelukt, dus printen zit er ook niet in
+	}
+
+	23/01/2017
+	{
+		Had het idee omde optie te geven de QRcode in te stellen als achtergrond van je lockscreen, zodat je makkelijk de code aan mensen kan laten scannen. (meer native functionaliteit accessen)
+
+		https://forums.xamarin.com/discussion/52230/set-image-as-backgroundto-lock-screen-and-regular-screen
+		https://components.xamarin.com/view/lock-screen
+		https://developer.android.com/reference/android/app/WallpaperManager.html
+		http://android-er.blogspot.be/2011/03/set-wallpaper-using-wallpapermanager.html
+
+		Wallpaper er van maken is gelukt. Nu nog zien of ik enkel de lockscreen an veranderen.
 	}
 }

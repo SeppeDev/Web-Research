@@ -7,6 +7,10 @@ using Android.Widget;
 using Android.OS;
 using ZXing.Mobile;
 using Android.Net.Wifi;
+using Android.Print;
+using static Android.Print.PrintDocumentAdapter;
+using Android.Print.Pdf;
+using Android.Webkit;
 
 namespace WhatsTheWifi
 {
@@ -30,6 +34,10 @@ namespace WhatsTheWifi
             string name = FindViewById<EditText>(Resource.Id.Name).Text;
             string password = FindViewById<EditText>(Resource.Id.Password).Text;
             ImageView qrView = FindViewById<ImageView>(Resource.Id.QrView);
+            //WebView webView = FindViewById<WebView>(Resource.Id.webView);
+
+            Button backgroundButton = FindViewById<Button>(Resource.Id.Background);
+            Android.Graphics.Bitmap image = CreateQRCode(qrView, name, password);
 
 
             MobileBarcodeScanner.Initialize(Application);
@@ -59,7 +67,23 @@ namespace WhatsTheWifi
             //Show
             createButton.Click += (sender, e) =>
             {
-                CreateQRCode(qrView, name, password);
+                image = CreateQRCode(qrView, name, password);
+
+                qrView.SetImageBitmap(image);
+
+                //webview.AddView(qrView);
+            };
+
+
+            //Print
+            //var printMgr = (PrintManager)GetSystemService(Context.PrintService);
+            //printMgr.Print("Print QRcode", qrView.CreatePrintDocumentAdapter(), null);
+
+
+            //Change Lockscreen background
+            backgroundButton.Click += (sender, e) =>
+            {
+                ChangeBackground(image);
             };
         }
 
@@ -94,7 +118,7 @@ namespace WhatsTheWifi
 
 
 
-        private void CreateQRCode(ImageView qrView, string name, string password)
+        private Android.Graphics.Bitmap CreateQRCode(ImageView qrView, string name, string password)
         {
             var barcodeWriter = new ZXing.Mobile.BarcodeWriter
             {
@@ -107,7 +131,50 @@ namespace WhatsTheWifi
             };
             var barcode = barcodeWriter.Write( name + "/" + password );
 
-            qrView.SetImageBitmap(barcode);
+            return barcode;
+        }
+
+
+        /*public override void OnLayout (PrintAttributes oldAttributes, PrintAttributes newAttributes, CancellationSignal cancellationSignal, LayoutResultCallback callback, Bundle extras, string name)
+        {
+            document = new PrintedPdfDocument(context, newAttributes);
+
+            CalculateScale (newAttributes);
+
+            var printInfo = new PrintDocumentInfo
+                .Builder(name + ".pdf")
+                .SetContentType(PrintContentType.Document)
+                .SetPageCount(1)
+                .Build();
+
+            callback.OnLayoutFinished(printInfo, true);
+        }
+
+        private override void OnWrite (PageRange[] pages, ParcelFileDescriptor destination, CancellationSignal cancellationSignal, WriteResultCallback callback)
+        {
+            PrintedPdfDocument.Page page = PrintedPdfDocument.StartPage(0);
+
+            page.Canvas.Scale(scale, scale);
+
+            view.Draw(page.Canvas);
+
+            document.FinishPage(page);
+
+            WritePrintedPdfDoc(destination);
+
+            document.Close();
+
+            document.Dispose();
+
+            callback.OnWriteFinished(pages);
+        }*/
+
+        private void ChangeBackground(Android.Graphics.Bitmap image)
+        {
+            WallpaperManager myWallpaperManager =
+            WallpaperManager.GetInstance(Application.Context);
+
+            myWallpaperManager.SetBitmap(image);
         }
     }
 }

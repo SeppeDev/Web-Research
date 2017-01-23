@@ -23,9 +23,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/Create" />
+<!-- <WebView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/webView" /> -->
     <ImageView
         android:src="@android:drawable/ic_menu_gallery"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="167.5dp"
         android:id="@+id/QrView" />
+    <Button
+        android:text="Set as background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Background" />
 </LinearLayout>
